@@ -1,0 +1,24 @@
+<h2>Settings</h2>
+
+<!-- Dark Mode Toggle -->
+<mat-slide-toggle [(ngModel)]="darkMode" (change)="toggleDarkMode()">
+  Dark Mode
+</mat-slide-toggle>
+
+<!-- Autocomplete Dropdown -->
+<mat-form-field appearance="fill" style="display: block; margin-top: 20px; width: 250px;">
+  <mat-label>Select view size</mat-label>
+  <input
+    type="text"
+    matInput
+    [(ngModel)]="selectedView"
+    [matAutocomplete]="auto"
+    placeholder="Select view size"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+

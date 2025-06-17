@@ -1,0 +1,37 @@
+.menu-container {
+  padding: 10px 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Just for spacing */
+mat-slide-toggle {
+    all: unset;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+/* Default light mode */
+body {
+  background-color: #f4f4f4;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode class */
+body.dark-theme {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+/* Optional: adjust specific Angular Material components too */
+body.dark-theme .mat-card {
+  background-color: #1e1e1e;
+}
+
+mat-form-field {
+  width: 300px;
+  margin-top: 20px;
+}
+
