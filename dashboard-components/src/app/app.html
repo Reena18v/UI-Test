@@ -2,17 +2,37 @@
 
   <!-- Sidebar -->
   <nav class="sidebar" [class.closed]="!opened">
-    <!-- Hamburger Menu Button at top-left inside sidebar -->
+    <!-- Hamburger Menu Button -->
     <button class="menu-button" (click)="toggleSidenav()" aria-label="Toggle sidebar">
       <mat-icon>menu</mat-icon>
     </button>
 
-    <!-- Menu Items -->
+    <!-- Sidebar Menu -->
     <ul class="menu-list">
-      <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
-      <li><a routerLink="clients" routerLinkActive="active">Clients</a></li>
-      <li><a routerLink="projects" routerLinkActive="active">Projects</a></li>
-      <li><a routerLink="settings" routerLinkActive="active">Settings</a></li>
+      <li>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }" (click)="$event.stopPropagation()">
+          <mat-icon class="sidebar-icon">dashboard</mat-icon>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="clients" routerLinkActive="active" (click)="$event.stopPropagation()">
+          <mat-icon class="sidebar-icon">people</mat-icon>
+          <span>Clients</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="projects" routerLinkActive="active" (click)="$event.stopPropagation()">
+          <mat-icon class="sidebar-icon">work_outline</mat-icon>
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="settings" routerLinkActive="active" (click)="$event.stopPropagation()">
+          <mat-icon class="sidebar-icon">settings</mat-icon>
+          <span>Settings</span>
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -20,10 +40,16 @@
   <main class="main-content">
     <router-outlet></router-outlet>
   </main>
-
 </div>
 
-
+<!-- Sidebar navigation item
+<a
+  mat-list-item
+  routerLink="/clients"
+  routerLinkActive="active"
+  (click)="onNavClick()" 
+> -->
+  Clients
 
 
   <!-- Sidebar -->
@@ -37,11 +63,11 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <!-- Main Content -->
+   Main Content -->
   <!-- <mat-sidenav-content>
     <mat-toolbar color="primary">
       <span>IFF Dashboard</span>
-    </mat-toolbar> --> -->
+    </mat-toolbar> --> 
 <!-- 
     <div class="main-content">
       <div class="card-grid">

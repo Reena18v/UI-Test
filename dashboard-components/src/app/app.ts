@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';  // add RouterModule here
-
+import { RouterOutlet, RouterModule } from '@angular/router';  
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,7 +14,7 @@ import { routes } from './app.routes';
   standalone: true,
   imports: [
     RouterOutlet,
-    RouterModule,        // <--- add RouterModule here
+    RouterModule,      
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,

@@ -70,5 +70,51 @@
   box-sizing: border-box;
 }
 
+.menu-list li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-list mat-icon {
+  font-size: 20px;
+}
+
+.menu-list li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.sidebar {
+  width: 220px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar.closed .menu-list span {
+  display: none; /* Hide text when collapsed */
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  color: inherit;
+}
+
 
 
